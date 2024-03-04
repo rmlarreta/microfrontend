@@ -1,92 +1,158 @@
-# MicroFrontend
+# POC MicroFrontend
+
+<div style="display: flex;">
+    <div>
+        <img src="./images/README images/logo_Single-spa.jpg" style="width: 100px;"/>
+    </div>
+    <div>
+        <img src="./images/README images/logo_Angular.png" style="width: 100px;"/>
+        <img src="./images/README images/logo_React.png" style="width: 100px;"/>
+        <img src="./images/README images/logo_Vue.png" style="width: 100px;"/>
+    </div>
+</div>
+
+El objetivo de esta POC es demostrar cómo funcionan los microfrontends mediante la utilización del framework single-spa a través de la convivencia entre aplicaciones desarrolladas con tecnologías diferentes pero que al unirlas en conjunto conforman una única página completamente funcional.
+
+Para eso, se creó una app denominada "root-config" la cual consumirá 3 aplicaciones hechas en React.js, Angular.js y Vue.js, denominadas "react-app", "angular-app" y "vue-app" respectivamente. Adicionalmente, se creó un servicio websocket para transmitir el estado de un contador desde React hacia las otras 2 aplicaciones como una alternativa de estado compartido.
+
+![Pantalla principal](./images/README%20images/pantalla_root-config.png)
+
+Cabe recalcar que el contenido de las aplicaciones será visualizada siempre a través de la pantalla principal de la aplicación "root-config", si se desea visualizar el contenido en cada aplicación individualmente se deberá realizar modificaciones adicionales indicadas en la página principal de cada aplicación individual.
+
+Adicionalmente, este tipo de infraestructura permite que si alguna de las aplicaciones deja de funcionar, la aplicación principal de root-config sigue visualizando la información de las otras apps.
+
+Para más información sobre cómo funciona y configura el framework single-spa dirigirse acá: https://single-spa.js.org/docs/getting-started-overview/
 
 
+## Buenas prácticas y recomendaciones para compartir el estado de una aplicación
 
-## Getting started
+The list below shows some common practices:
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- Create a shared API utility microfrontend that caches fetch/XHR requests and their responses. All microfrontends call into the API microfrontend when making a request, so that the microfrontend can control whether to refetch the data or not.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- Create a shared Auth utility microfrontend that exposes a userCanAccess function for other microfrontends to use when checking permissions. The auth module may also include other exports such as the logged in user object, auth tokens, etc.
 
-## Add your files
+- Export shared state from the public interface of your microfrontend so that libraries can import it. For values that change over time, Observables (RxJS docs) can be useful. Create a ReplaySubject so that you can push new values out to all subscribers at any time.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- Use custom browser events to communicate. Fire them on the window in one microfrontend, and listen to the event in a different microfrontend.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.gyfcloud.com.ar/architecture/poc/microfrontend.git
-git branch -M main
-git push -uf origin main
-```
+- Use cookies, local/session storage, or other similar methods for storing and reading that state. These methods work best with things that don't change often, e.g. logged-in user info.
 
-## Integrate with your tools
+Más información en el siguiente link: https://single-spa.js.org/docs/faq/#how-can-i-share-application-state-between-applications
 
-- [ ] [Set up project integrations](http://gitlab.gyfcloud.com.ar/architecture/poc/microfrontend/-/settings/integrations)
 
-## Collaborate with your team
+## Creación y ejecución de aplicaciones
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Creación de aplicaciones
 
-## Test and Deploy
+Para la creación de la aplicación angular-app, react-app y vue-app se ejecutó el siguiente comando:
 
-Use the built-in continuous integration in GitLab.
+~~~
+npx create-single-spa --moduleType app-parcel
+~~~
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Se siguió el paso a paso seleccionando las herramientas deseadas y eligiendo el framework/librearía correspondiente como template para la creación del mismo.
 
-***
 
-# Editing this README
+### root-config
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Para la creación de la aplicación root-config se ejecutó el siguiente comando:
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+~~~
+npx create-single-spa --moduleType root-config
+~~~
 
-## Name
-Choose a self-explaining name for your project.
+Adicionalmente, se agregaron configuraciones adicionales a los archivos src/index.ejs y src/microfrontend-layout.html para poder visualizar las 3 aplicaciones desde la aplicación root-config
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+#### root-config\src\index.ejs
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+![Primera configuración a realizar en index.ejs de root-config](./images/README%20images/Configuracion_index.ejs_1.png)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+![Segunda configuración a realizar en index.ejs de root-config](./images/README%20images/Configuracion_index.ejs_2.png)
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+![Tercera configuración a realizar en index.ejs de root-config](./images/README%20images/Configuracion_index.ejs_3.png)
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+#### root-config\src\microfrontend-layout.html
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+![Configuración a realizar en microfrontend-layout.html de root-config](./images/README%20images/Configuracion_microfrontend-layout.hrml_1.png)
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+### Ejecución de aplicaciones
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+A continuación se detallan las modificaciones que se tuvieron que hacer sobre los templates ya armados de single-spa que fueron necesarios para poder levantar las aplicaciones por alguna configuración faltante.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### angular-app
 
-## License
-For open source projects, say how it is licensed.
+Para su ejecución es necesario primero crear una carpeta denominada "environments" y dentro crear un archivo .ts llamado environment, el cual deberá tener el siguiente contenido:
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+~~~
+export const environment = {production: false}
+~~~
+
+Esto es para evitar un error al ejecutar la aplicación donde se espera que exista este archivo que no es contemplado en el template de Angular.
+
+Luego ejecutar la instalación de paquetes y dependencias faltantes
+
+~~~
+yarn install
+~~~
+
+Una vez hecho esto, se podrá ejecutar la aplicación mediante el siguiente comando
+
+~~~
+ng serve
+~~~
+
+
+### react-app y root-config
+
+Para su ejecución simplemente se deberá ejecutar el siguiente comando:
+
+~~~
+yarn start
+~~~
+
+
+### vue-app
+
+Para esta aplicación se deberá modificar el archivo "vue.config.js" agregando la siguiente configuración de webpack:
+
+~~~
+module.exports = {
+...
+configureWebpack: {
+    output: {
+      libraryTarget: 'system'
+    },
+  }
+}
+~~~
+
+Esto es para solventar un error que se genera al momento de intentar leer el script con información de la aplicación relacionado con webpack.
+
+Finalmente se deberá ejecutar el siguiente comando:
+
+~~~
+yarn serve
+~~~
+
+
+### websocketService
+
+Se deberá instalar el paquete "ws" para poder ejecutar el websocket, para eso ejecutar lo siguiente:
+
+~~~
+yarn add ws
+~~~
+
+Ejecutar el siguiente comando para correr el websocket
+
+~~~
+node webSocketService
+~~~
+
+
+## Diagrama de comunicación entre microfrontends
+
+![Diagrama de comunicación entre microfrontends](/images/README%20images/POC%20Microfrontend.drawio.png)
