@@ -3,7 +3,7 @@ const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (webpackConfigEnv, argv) => {
-  const orgName = "gyf";
+  const orgName = "rlarreta";
   const defaultConfig = singleSpaDefaults({
     orgName,
     projectName: "root-config",

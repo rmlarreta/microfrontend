@@ -50,10 +50,10 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@gyf/root-config": "//localhost:9000/gyf-root-config.js",
-        "@gyf/react-app": "//localhost:8080/gyf-reactApp.js",
-        "@gyf/angular-app": "//localhost:4200/main.js",
-        "@gyf/vue-app": "//localhost:8081/js/app.js"
+        "root-config": "//localhost:9000/root-config.js",
+        "react-app": "//localhost:8080/reactApp.js",
+        "angular-app": "//localhost:4200/main.js",
+        "vue-app": "//localhost:8081/js/app.js"
       }
     }
   </script>
@@ -80,7 +80,7 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <script>
-    System.import('@gyf/root-config');
+    System.import('root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
