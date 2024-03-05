@@ -24,6 +24,37 @@ Adicionalmente, este tipo de infraestructura permite que si alguna de las aplica
 Para más información sobre cómo funciona y configura el framework single-spa dirigirse acá: https://single-spa.js.org/docs/getting-started-overview/
 
 
+## Versiones
+
+### react-app
+
+~~~
+webpack: 5.89.0
+webpack-cli: 4.10.0
+webpack-config-single-spa-react: 4.0.0
+webpack-dev-server: 4.0.0
+webpack-merge: 5.8.0
+react: 17.0.2
+~~~
+
+
+### angular-app
+
+~~~
+angular: 15
+angular-builders/custom-webpack: 15.0.0
+rxjs: 7.5.0
+~~~
+
+
+### vue-app
+
+~~~
+core-js: 3.8.3
+vue: 3.2.13
+~~~
+
+
 ## Buenas prácticas y recomendaciones para compartir el estado de una aplicación
 
 The list below shows some common practices:
@@ -44,6 +75,8 @@ Más información en el siguiente link: https://single-spa.js.org/docs/faq/#how-
 ## Creación y ejecución de aplicaciones
 
 ### Creación de aplicaciones
+
+Aquí se detalla los comandos ejecutados y configuraciones hechas para la creación de cada una de las aplicaciones. **No deben de aplicarse ninguno de estos cambios si ya están creadas las aplicaciones**
 
 Para la creación de la aplicación angular-app, react-app y vue-app se ejecutó el siguiente comando:
 
@@ -81,6 +114,8 @@ Adicionalmente, se agregaron configuraciones adicionales a los archivos src/inde
 ### Ejecución de aplicaciones
 
 A continuación se detallan las modificaciones que se tuvieron que hacer sobre los templates ya armados de single-spa que fueron necesarios para poder levantar las aplicaciones por alguna configuración faltante.
+
+Si es la primera vez ejecutando las aplicaciones, se deberá ejecutar el comando "yarn install" para la instalaciones de paquetes y dependencias.
 
 ### angular-app
 

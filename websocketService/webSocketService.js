@@ -6,6 +6,8 @@ console.log('Estableciendo conexión...');
 // Crea un nuevo servidor WebSocket
 const wss = new WebSocket.Server({ port: 9001 }); // Puerto en el que el servidor escuchará las conexiones WebSocket
 
+console.log('Conexión establecida!');
+
 // Lista para almacenar todas las conexiones WebSocket establecidas
 const clients = new Set();
 

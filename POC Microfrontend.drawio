@@ -1,80 +1,94 @@
-<mxfile host="Electron" modified="2024-03-04T21:23:00.730Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="wpSPZ7nfO_e3xMk316GY" version="23.1.5" type="device">
-  <diagram name="Página-1" id="NR-jUbXNxlFBubLmtzdW">
-    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-18" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="40" y="80" width="1040" height="400" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-1" value="root-config" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="40" width="300" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-2" value="react-app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-1">
-          <mxGeometry x="80" y="40" width="150" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-1" source="XmWbMJ4j4ffJ6iV1jKb3-3">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-40" y="160" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-3" value="angular-app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-1">
-          <mxGeometry x="80" y="130" width="150" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-1" source="XmWbMJ4j4ffJ6iV1jKb3-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-40" y="250" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-4" value="vue-app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-1">
-          <mxGeometry x="80" y="220" width="150" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18" source="XmWbMJ4j4ffJ6iV1jKb3-5" target="XmWbMJ4j4ffJ6iV1jKb3-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-5" value="websocketService.js" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="640" y="130" width="140" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18" source="XmWbMJ4j4ffJ6iV1jKb3-2" target="XmWbMJ4j4ffJ6iV1jKb3-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="160" as="sourcePoint" />
-            <mxPoint x="270" y="250" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="400" y="250" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18" target="XmWbMJ4j4ffJ6iV1jKb3-5">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="550" y="220" as="targetPoint" />
-            <mxPoint x="120" y="90" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="120" y="70" />
-              <mxPoint y="70" />
-              <mxPoint y="360" />
-              <mxPoint x="710" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-13" value="Las 3 aplicaciones escuchan al ws" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006eaf;fontSize=16;fontStyle=1" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="209" y="370" width="330" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-14" value="La aplicación de React envía el estado del contador cuando se actualiza a través del botón" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="353" y="10" width="267" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-15" value="Las aplicaciones de angular-app y vue-app reciben el mensaje del contador apenas se actualiza" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="353" y="100" width="267" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-16" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="800" y="100" width="20" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-17" value="El servicio de websocketService.js almacena a todas las aplicacioens que la estén escuchando, de esta forma cuando se reciba una actualización por parte de la react-app se enviarán automáticamente esa información a las otras apps." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="XmWbMJ4j4ffJ6iV1jKb3-18">
-          <mxGeometry x="820" y="100" width="220" height="120" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Página-1" id="NR-jUbXNxlFBubLmtzdW">
+        <mxGraphModel dx="1008" dy="1606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-18" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="40" y="80" width="1040" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-1" value="root-config (localhost:9000)" style="swimlane;whiteSpace=wrap;html=1;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="40" width="300" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-2" value="react-app&lt;br&gt;(localhost:8080)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" vertex="1">
+                    <mxGeometry x="80" y="50" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" source="XmWbMJ4j4ffJ6iV1jKb3-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-40" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-40" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-3" value="angular-app&lt;br&gt;(localhost:4200)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" vertex="1">
+                    <mxGeometry x="80" y="140" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" source="XmWbMJ4j4ffJ6iV1jKb3-4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-40" y="250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="20" y="261"/>
+                            <mxPoint x="20" y="260"/>
+                            <mxPoint x="-40" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-4" value="vue-app&lt;br&gt;(localhost:8081)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" vertex="1">
+                    <mxGeometry x="80" y="231" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="170" as="sourcePoint"/>
+                        <mxPoint x="230" y="260" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="360" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" source="XmWbMJ4j4ffJ6iV1jKb3-5" target="XmWbMJ4j4ffJ6iV1jKb3-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-5" value="websocketService.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="640" y="140" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" source="XmWbMJ4j4ffJ6iV1jKb3-2" target="XmWbMJ4j4ffJ6iV1jKb3-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;fillColor=#1ba1e2;strokeColor=#006EAF;strokeWidth=2;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" target="XmWbMJ4j4ffJ6iV1jKb3-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="220" as="targetPoint"/>
+                        <mxPoint x="120" y="90" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="70"/>
+                            <mxPoint y="70"/>
+                            <mxPoint y="360"/>
+                            <mxPoint x="710" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-13" value="Las 3 aplicaciones escuchan al ws" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006eaf;fontSize=16;fontStyle=1" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="209" y="370" width="330" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-14" value="La aplicación de React envía el estado del contador cuando se actualiza a través del botón" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="353" y="10" width="267" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-15" value="Las aplicaciones de angular-app y vue-app reciben el mensaje del contador apenas se actualiza" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="353" y="100" width="267" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-16" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="800" y="100" width="20" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="XmWbMJ4j4ffJ6iV1jKb3-17" value="El servicio de websocketService.js almacena a todas las aplicacioens que la estén escuchando, de esta forma cuando se reciba una actualización por parte de la react-app se enviarán automáticamente esa información a las otras apps." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="XmWbMJ4j4ffJ6iV1jKb3-18" vertex="1">
+                    <mxGeometry x="820" y="100" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="-90" width="20" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="La aplicación de root-config toma consume los scripts base de cada una de las aplicaciones generadas a partir de &quot;systemjs&quot;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(100, 118, 135);&quot;&gt;localhost:9000/gyf-root-config.js&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(100, 118, 135);&quot;&gt;localhost:8080/gyf-reactApp.js&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(100, 118, 135);&quot;&gt;localhost:4200/main.js&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(100, 118, 135);&quot;&gt;localhost:8081/js/app.js&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="-110" width="300" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
